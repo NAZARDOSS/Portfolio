@@ -1,7 +1,7 @@
 {
   "name": "second-three",
   "version": "0.1.0",
-  "homepage": "https://NAZARDOSS.github.io/Portfolio",
+  "homepage": "https://nazardoss.github.io/Portfolio",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
