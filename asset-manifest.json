@@ -1,14 +1,24 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.e9a6bb6c.css",
-    "main.js": "/Portfolio/static/js/main.be72db74.js",
+    "main.css": "/Portfolio/static/css/main.ebb399bf.css",
+    "main.js": "/Portfolio/static/js/main.ae29439d.js",
+    "static/media/landRover.png": "/Portfolio/static/media/landRover.ede8d376df99b599f7ff.png",
+    "static/media/figma2.png": "/Portfolio/static/media/figma2.bcd6dd33ff0ddaff4092.png",
+    "static/media/gigagram.png": "/Portfolio/static/media/gigagram.79775c14abeef0876645.png",
+    "static/media/bgstyles.png": "/Portfolio/static/media/bgstyles.2a4c5c02d21679d35b55.png",
+    "static/media/figma1.png": "/Portfolio/static/media/figma1.a7c16084989fd75601a3.png",
+    "static/media/zIndex.png": "/Portfolio/static/media/zIndex.cf731188103a5d632359.png",
+    "static/media/dashboard2.png": "/Portfolio/static/media/dashboard2.3f447ab207b0292f7b7c.png",
     "static/media/me.png": "/Portfolio/static/media/me.181563ef1b93a62be8e6.png",
+    "static/media/regexp.png": "/Portfolio/static/media/regexp.182d38409823b4352fb7.png",
+    "static/media/flappy.png": "/Portfolio/static/media/flappy.57c6f4254c9436077048.png",
+    "static/media/dashboard1.png": "/Portfolio/static/media/dashboard1.160160ec4ef366387645.png",
     "index.html": "/Portfolio/index.html",
-    "main.e9a6bb6c.css.map": "/Portfolio/static/css/main.e9a6bb6c.css.map",
-    "main.be72db74.js.map": "/Portfolio/static/js/main.be72db74.js.map"
+    "main.ebb399bf.css.map": "/Portfolio/static/css/main.ebb399bf.css.map",
+    "main.ae29439d.js.map": "/Portfolio/static/js/main.ae29439d.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9a6bb6c.css",
-    "static/js/main.be72db74.js"
+    "static/css/main.ebb399bf.css",
+    "static/js/main.ae29439d.js"
   ]
 }
