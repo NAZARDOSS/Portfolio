@@ -1,14 +1,17 @@
-import React from 'react';
-import First from './FirstPage/First';
-import Second from './SecondPage/Second';
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Main from './Main'
+import Layout from '../Layout';
+import SiteRoutes from '../SiteRoutes';
+function App() {
 
-function App (props) {
-    return (
-        <div>
-            <First />
-            <Second />
-        </div>
-    );
+  return (
+    <Router>
+     <Layout>
+     <SiteRoutes />
+     </Layout>
+    </Router>
+  );
 }
 
 export default App;

@@ -5,7 +5,7 @@ import * as THREE from 'three'
 
 export default function Model(props) {
 
-  const { nodes, materials } = useGLTF('./scene.glb')
+  const { nodes, materials } = useGLTF('./Portfolio/scene.glb')
   const groupRef = useRef()
   const cameraRef = useRef()
   const { mouse } = useThree()
@@ -40,4 +40,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('./scene.glb')
+useGLTF.preload('./Portfolio/scene.glb')
