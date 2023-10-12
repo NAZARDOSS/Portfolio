@@ -72,16 +72,7 @@ function First(props) {
       <div className="first">
         <Mode toggleDarkMode={toggleDarkMode} />
         <h1 className="name">NAZAR DOSMUKHAMBETOV</h1>
-        <Suspense fallback={null}>
-            <Canvas resize={{ scroll: false }} id={darkMode ? "dark" : "light"} >
-              <Model />
-              <Star />
-            </Canvas>
-        </Suspense>
-        <Links />
-        <span className="button_down" onClick={handleScrollDownClick}>
-          <KeyboardDoubleArrowDownIcon />
-        </span>
+        {/* <Links /> */}
       </div>
     </>
   );

@@ -147,10 +147,10 @@ function Projects(props) {
   }, []);
 
   function close() {
-    document.querySelector('.resume').classList.add('closing');
+    document.querySelector('.projects').classList.add('closing');
 
     setTimeout(() => {
-      navigate("/nav")
+      navigate("/Portfolio/nav")
       setMousePosition({ x: 0, y: 0 });
     }, 500);
   }

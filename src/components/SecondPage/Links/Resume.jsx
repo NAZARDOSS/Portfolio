@@ -28,6 +28,7 @@ function Plane({ mousePosition }) {
 
 
 function Resume(props) {
+  console.log('resume')
   const navigate = useNavigate();
   const { resume, setResume } = props;
 
@@ -62,7 +63,7 @@ function Resume(props) {
 
     setTimeout(() => {
       setMousePosition(0,0)
-      navigate('/nav');
+      navigate('/Portfolio/nav');
     }, 500);
   }
 

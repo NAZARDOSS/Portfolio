@@ -1,58 +1,44 @@
 import React, { useState, useEffect } from 'react';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import ProfHide from './ProfHide';
-import { Link } from 'react-router-dom';
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import Resume from './Links/Resume';
+import Projects from './Links/Projects';
 
-function Second (props) {
-    const [hideName, setHideName] = useState("")
-    const [links, setLinks] = useState("none")
+function Second(props) {
+  const [clicked, setClicked] = useState('block');
+  const location = useLocation();
 
-    function toHide() {
-       setLinks("flex")
-       setHideName("none")
+  const handleTextClick = () => {
+    setClicked('none');
+  };
+
+  useEffect(() => {
+    if (location.pathname === '/Portfolio/') {
+      setClicked('block');
+    } else {
+      setClicked('none');
     }
+  }, [location.pathname]);
 
-    const handleScrollUpClick = () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      };
-    
-      useEffect(() => {
-        const elements = document.querySelectorAll(".animate-on-scroll");
-        function animateOnScroll() {
-          for (let i = 0; i < elements.length; i++) {
-            const element = elements[i];
-            const rect = element.getBoundingClientRect();
-        
-            if (
-              rect.bottom >= 0 &&
-              rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-            ) {
-              element.classList.add("is-visible");
-            }
-          }
-        }
-    
-        animateOnScroll();
-        
-        window.addEventListener("scroll", animateOnScroll);
-        
-        return () => {
-          window.removeEventListener("scroll", animateOnScroll);
-        };
-        }, []);
+  return (
+    <div className="secondPage">
+      <ul>
+        <li>
+          <Link to="/Portfolio/nav" className='link'> 
+            <p className='text_link' style={{ cursor: 'pointer', display: clicked }} onClick={handleTextClick}>
+              Hi, Welcome to my Portfolio !!! I hope you have already moved your cursor. If you haven't done it - do it! By clicking on this text, you may be redirected to my other pages, please try it now!
+            </p>
+          </Link>
+        </li>
+      </ul>
 
-    return (
-        <div className="secondPage">
-            <span className="button_up" onClick={handleScrollUpClick}>
-                <KeyboardDoubleArrowUpIcon />
-            </span>
-             <Link to="nav"><h1 className='prof' onClick={toHide} style={{display: hideName, cursor: 'pointer'}}>Frontend Developer</h1></Link>
-            <ProfHide style={{display: links}} />
-        </div>
-    );
+      <Routes>
+        <Route path="/Portfolio/nav" element={<ProfHide />} />
+        <Route path="/Portfolio/resume" element={<Resume />} />
+        <Route path="/Portfolio/projects" element={<Projects />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default Second;
