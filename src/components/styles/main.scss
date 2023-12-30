@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import 'colors';
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  
+}
+
+
+
+#light {
+background-color: $light-bg;
+background-image: $light-bg-image
+}
+
+
+#dark {
+  background: $dark-bg;
+  background-image: $dark-bg-image
+}
+
+
+.first {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .text {
+    color: red;
+    font-size: 24px;
+    z-index: 5;
+  }
+
+  .button_down {
+    position: absolute;
+    text-align: center;
+    bottom: 50px;
+    cursor: pointer;
+
+    svg {
+      font-size: 50px;
+      color: white;
+    }
+  }
+
+  .name {
+    position: absolute;
+    color: #99c69a;
+    mix-blend-mode: difference;
+    font-size: 350%;
+    font-family: 'Pathway Gothic One', sans-serif;
+    letter-spacing: 2vw;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+  .links {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  div {
+    div {
+      canvas {
+        position: absolute !important;
+        filter: blur(0.8px);
+        width: 100% !important;
+        height: 100% !important;
+      
+      }
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .btnContainer {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 5;
+  }
+
+  .btn {
+    margin: 15px;
+    background: #3c3459;
+    border-radius: 999px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .knob {
+    position: relative;
+    width: 55px;
+    height: 20px;
+    padding-bottom: 5px;
+  }
+
+  .top {
+    background-color: #827d96;
+    border-radius: 999px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+}
+
+.secondPage {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  a{
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+
+    .text_link{
+      cursor: pointer;
+      pointer-events: visible;
+      color: white;
+      width: 60%;
+      mix-blend-mode: difference;
+      font-size: 30px;
+      font-family: 'Pathway Gothic One', sans-serif;
+      letter-spacing: 1px;
+
+      &:hover{
+        color: greenyellow;
+      }
+    }
+  }
+  .prof {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      padding: 0;
+      display: flex;
+
+      li {
+        pointer-events: visible;
+        padding: 0 150px 0 150px;
+        cursor: pointer;
+        list-style: none;
+      }
+    }
+  }
+
+  // .prof_clicked {
+  //   width: 100%;
+  //   height: 100%;
+  //   ul {
+  //     li {
+  //       pointer-events: visible;
+  //       list-style: none;
+  //     }
+  //   }
+  // }
+
+  .button_up {
+    cursor: pointer;
+
+    svg {
+      font-size: 50px;
+      color: white;
+    }
+  }
+
+  .resume {
+    display: flex !important;
+    transition: opacity 0.5s ease-in-out;
+
+    .parent {
+      display: grid;
+      grid-template-columns: 200px 150px;
+      grid-template-rows: 5fr repeat(2, 6fr) 2fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 0px;
+    }
+
+    .div1 {
+      grid-area: 1 / 1 / 2 / 2;
+      background-color: red;
+      display: flex;
+
+      img {
+        border-radius: 50%;
+        height: 80px;
+        width: 85px;
+      }
+
+      .fullname {
+        margin-left: 10px;
+        margin-top: 30px;
+        font-weight: bold;
+      }
+    }
+
+    // .div2 {
+    //   grid-area: 1 / 2 / 2 / 3;
+    //   background-color: palegoldenrod
+    // }
+
+    // .div3 {
+    //   grid-area: 2 / 1 / 3 / 2;
+    //   background-color: #3c3459;
+    // }
+
+    // .div4 {
+    //   grid-area: 2 / 2 / 3 / 3;
+    //   background-color: antiquewhite;
+    // }
+
+    // .div5 {
+    //   grid-area: 3 / 1 / 4 / 2;
+    //   background-color: aqua;
+    // }
+
+    // .div6 {
+    //   grid-area: 3 / 2 / 4 / 3;
+    //   background-color: aquamarine;
+    // }
+
+    // .div7 {
+    //   grid-area: 4 / 1 / 5 / 2;
+    //   background-color: greenyellow;
+    // }
+
+    // .div8 {
+    //   grid-area: 4 / 2 / 5 / 3;
+    //   background-color: magenta;
+    // }
+
+    p,
+    li {
+      margin: 0;
+      font-size: 8px;
+    }
+
+    ul {
+      padding: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    width: 100%;
+    height: 100%;
+  }
+}
+.main{
+  position: relative; 
+  .canvas{
+    z-index: 0;
+    position: absolute !important;
+
+    canvas {
+      position: absolute !important;
+      top: 0%;
+      filter: blur(0.8px);
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .black{
+    height: 100vh;
+    width: 100%;
+  }
+  .dark {
+    background-color: black; /* Цвет фона в темном режиме */
+    color: white; /* Цвет текста в темном режиме */
+    transition: background-color 0.5s ease; /* Плавный переход цвета фона в течение 0.5 секунды */
+  }
+}
+.dark_block {
+  position: absolute;
+  height: 200vh;
+  width: 100%;
+  margin-bottom: 100vh;
+}
+.dark_block2 {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 100vh;
+}
+.part2 {
+  height: 100vh;
+  width: 100%;
+}
+
+
+
+// .main {
+//   width: 100%; 
+//   height: 100%; 
+//   z-index: -1;
+//   .canvas{
+//     position: absolute !important;
+//     canvas {
+//       position: absolute !important;
+//       filter: blur(0.8px);
+//       width: 100% !important;
+//       height: 100% !important;
+    
+//     }
+//   }
+// }

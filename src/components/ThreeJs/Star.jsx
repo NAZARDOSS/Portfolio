@@ -39,7 +39,7 @@ export default function Star() {
   });
 
   return (
-    <points ref={pointsRef}>
+    <points ref={pointsRef} >
       <pointsMaterial attach="material" size={1.5}  sizeAttenuation={false} />
     </points>
   );

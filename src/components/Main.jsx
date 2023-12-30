@@ -8,13 +8,13 @@ import Projects from './SecondPage/Links/Projects';
 import Resume from './SecondPage/Links/Resume';
 
 function Main (props) {
-
+    console.log(props.darkMode1)
     const [darkMode, setDarkMode] = useState(false); 
-
+    console.log('layout1 active')
     return (
         <div className='main' id={darkMode ? "dark" : "light"}>
             <Canvas className='canvas' >
-              <Model />
+              <Model darkMode = {darkMode}/>
               <Star />
             </Canvas>
             <First darkMode = {darkMode} setDarkMode = {setDarkMode}/>

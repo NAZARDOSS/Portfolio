@@ -1,0 +1,86 @@
+// svg {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   font: 700 200px/200px Catamaran, sans-serif;
+//   overflow: hidden;
+// }
+
+.page,
+.page a {
+  cursor: none;
+}
+
+
+
+// nav ul {
+//   position: relative;
+//   z-index: 9999;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   padding-left: 0;
+
+//   li {
+//     list-style: none;
+//     padding: 0 10px;
+//   }
+
+//   li>a {
+//     color: #000;
+//     text-decoration: none;
+//     padding: 20px 10px;
+//     position: relative;
+
+//     &:hover:after {
+//       width: 100%;
+//       right: auto;
+//       left: 0;
+//     }
+
+//     &:after {
+//       content: "";
+//       width: 0;
+//       height: 2px;
+//       background-color: #000;
+//       position: absolute;
+//       left: auto;
+//       right: 0;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       transition: all 0.3s ease-in;
+//     }
+//   }
+// }
+
+
+
+.circle-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 50%;
+
+  &--outer {
+    width: 50px;
+    height: 50px;
+    border: 2px solid purple;
+    z-index: 12000;
+    opacity: 1;
+    mix-blend-mode:difference;
+    background-color: purple;
+  }
+
+  &--inner {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    z-index: 11000;
+    background: #fcfafa;
+    mix-blend-mode:difference;
+  }
+}

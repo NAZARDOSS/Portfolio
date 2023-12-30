@@ -1,10 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import me from "../../../assets/me.png";
+import me from "../../../assets/me.jpg";
 import { useLoader } from '@react-three/fiber';
 import { TextureLoader} from 'three';
-import CloseIcon from '@mui/icons-material/Close';
-import { useNavigate } from 'react-router-dom';
+import { meshBasicMaterial } from 'three';
 
 function Plane({ mousePosition }) {
   const planeRef = useRef();
@@ -21,15 +20,13 @@ function Plane({ mousePosition }) {
   return (
     <mesh ref={planeRef} position={[-1.2, 0, -1.5]}>
       <planeGeometry args={[6, 8]} />
-      <meshMatcapMaterial map={texture} color={'aliceblue'} />
+      <meshBasicMaterial color={0xffffff} map={texture} />
     </mesh>
   );
 }
 
 
 function Resume(props) {
-  console.log('resume')
-  const navigate = useNavigate();
   const { resume, setResume } = props;
 
   function openResumeInNewTab() {
@@ -58,27 +55,25 @@ function Resume(props) {
     };
   }, []);
 
-  function close() {
-    document.querySelector('.resume').classList.add('closing');
-
-    setTimeout(() => {
-      setMousePosition(0,0)
-      navigate('/Portfolio/nav');
-    }, 500);
-  }
-
+  
   return (
     <div
      className={`resume ${'display' === 'none' ? 'hidden' : ''}`}
       style={{display: resume}}
       onMouseMove={handleMouseMove}
-    >
-      <Canvas>
-        <Plane mousePosition={mousePosition} />
-      </Canvas>
-      <button className='button_resume' onClick={openResumeInNewTab} >Go to Resume</button>
+    > 
+    <div className="title_block">
+      <h1 className='projects_title'>Resume</h1>
+      <p className="resume_title_text">Bio | Experiance | Education | Languages</p>
+    </div>
       
-     <span className='close' onClick={close}> <CloseIcon/> </span>
+      <div className='resume_block'>
+        <Canvas style={{height: '750px', maxWidth: '900px', minWidth: '750px'}}>
+        <Plane mousePosition={mousePosition} position="absolute" top="0" left="0" width="100%" height="100%" />
+        </Canvas>
+        <button className='button_resume' onClick={openResumeInNewTab} >Go to Resume</button>
+      </div>
+      
     </div>
   );
 }

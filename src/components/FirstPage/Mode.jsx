@@ -3,22 +3,15 @@ import gsap from "gsap";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 function Mode(props) {
-  // const { toggleDarkMode } = useContext(ThemeContext);
   //-------------> animation
   const btnRef = useRef(null);
   const ropeRef = useRef(null);
   const ropeEndRef = useRef(null);
   const knobRef = useRef(null);
-  // const lightRef = useRef(null);
   const topRef = useRef(null);
 
   useEffect(() => {
     const btn = btnRef.current;
-    // const rope = ropeRef.current;
-    // const ropeEnd = ropeEndRef.current;
-    // const knob = knobRef.current;
-    // // const light = lightRef.current;
-    // const top = topRef.current;
 
     let isChecked = false;
 

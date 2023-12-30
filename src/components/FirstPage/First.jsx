@@ -1,35 +1,31 @@
 import React, { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
-import styles from "../../style.scss"
+import styles from '../styles/main.scss'
 import { useRef } from "react";
 import Mode from "./Mode";
+import { useContext } from 'react';
 import Model from "../ThreeJs/Model";
 import Star from "../ThreeJs/Star";
-import Links from "./Links";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 function First(props) {
-  const {darkMode, setDarkMode} = props; 
+  // const {darkMode, setDarkMode} = props; 
 
   const toggleDarkMode = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
+    const newMode = !props.darkMode;
+    props.setDarkMode(newMode);
     console.log(newMode);
   };
 
   // Функция для проверки настроек темы
   const checkDarkTheme = () => {
     const prefersDarkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setDarkMode(prefersDarkTheme);
+    props.setDarkMode(prefersDarkTheme);
   };
 
-  const handleScrollDownClick = () => {
-    const screenHeight = window.innerHeight;
-    window.scrollBy({
-      top: screenHeight,
-      behavior: "smooth",
-    });
-  };
+  useEffect(() => {
+    localStorage.setItem("darktheme", props.darkMode)
+  }, [props.darkMode])
 
   useEffect(() => {
     const elements = document.querySelectorAll(".animate-on-scroll");
@@ -60,7 +56,7 @@ function First(props) {
   useEffect(() => {
     checkDarkTheme();
     const darkThemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleThemeChange = (e) => setDarkMode(e.matches);
+    const handleThemeChange = (e) => props.setDarkMode(e.matches);
 
     darkThemeMediaQuery.addListener(handleThemeChange);
 
@@ -79,3 +75,6 @@ function First(props) {
 }
 
 export default First;
+
+
+
