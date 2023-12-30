@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.9000626f.css",
-    "main.js": "/Portfolio/static/js/main.de314d1c.js",
+    "main.css": "/Portfolio/static/css/main.0c4207ce.css",
+    "main.js": "/Portfolio/static/js/main.0acdcc20.js",
     "static/media/landRover.png": "/Portfolio/static/media/landRover.ede8d376df99b599f7ff.png",
     "static/media/figma2.png": "/Portfolio/static/media/figma2.bcd6dd33ff0ddaff4092.png",
     "static/media/gigagram.png": "/Portfolio/static/media/gigagram.79775c14abeef0876645.png",
@@ -14,11 +14,11 @@
     "static/media/me.jpg": "/Portfolio/static/media/me.c22d4965454b1d09ca0d.jpg",
     "static/media/dashboard1.png": "/Portfolio/static/media/dashboard1.160160ec4ef366387645.png",
     "index.html": "/Portfolio/index.html",
-    "main.9000626f.css.map": "/Portfolio/static/css/main.9000626f.css.map",
-    "main.de314d1c.js.map": "/Portfolio/static/js/main.de314d1c.js.map"
+    "main.0c4207ce.css.map": "/Portfolio/static/css/main.0c4207ce.css.map",
+    "main.0acdcc20.js.map": "/Portfolio/static/js/main.0acdcc20.js.map"
   },
   "entrypoints": [
-    "static/css/main.9000626f.css",
-    "static/js/main.de314d1c.js"
+    "static/css/main.0c4207ce.css",
+    "static/js/main.0acdcc20.js"
   ]
 }
